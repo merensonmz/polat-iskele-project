@@ -2,10 +2,11 @@ import { motion } from "framer-motion";
 import { Building2, ShoppingBag, Factory, Paintbrush } from "lucide-react";
 
 const projects = [
-  { icon: Building2, title: "Konut Projesi", desc: "Büyük ölçekli konut projelerinde güvenli iskele çözümleri sağladık." },
-  { icon: ShoppingBag, title: "AVM Şantiyesi", desc: "Ticari merkezlerin inşaat süreçlerinde profesyonel destek verdik." },
-  { icon: Factory, title: "Endüstriyel Tesis", desc: "Endüstriyel tesislerde yüksek güvenlikli iskele sistemleri kurduk." },
-  { icon: Paintbrush, title: "Dış Cephe Uygulaması", desc: "Dış cephe yenileme ve restorasyon projelerinde iskele hizmeti sunduk." },
+  { icon: Building2, title: "Günsev İnşaat", desc: "Güvenli H tipi cephe iskele çözümleriyle şantiyelerinde destek sağladık." },
+  { icon: ShoppingBag, title: "Güvenoğlu Yapı", desc: "Cephe iskele sistemi kurulumunu hızlı ve düzenli şekilde tamamladık." },
+  { icon: Factory, title: "Sebzeci Yapı", desc: "Gaziantep’te birçok projede yüksek güvenlikli H tipi iskele uygulamaları yaptık." },
+  { icon: Paintbrush, title: "Ata Beton Yapı", desc: "Beton işleri ve dış cephe projelerinde H tipi iskele hizmeti sunduk." },
+  { icon: Building2, title: "Gaziantep Gold Yapı", desc: "Altın standartta iskele kurulumlarıyla projelerine destek verdik." },
 ];
 
 const ReferencesSection = () => (

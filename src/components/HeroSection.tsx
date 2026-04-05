@@ -3,6 +3,10 @@ import { Phone, FileText, Shield, Users, Zap, Award } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import heroImg from "@/assets/hero-scaffolding.jpg";
 
+const scrollToContact = () => {
+  document.getElementById("iletisim")?.scrollIntoView({ behavior: "smooth", block: "start" });
+};
+
 const badges = [
   { icon: Shield, label: "Güvenli Sistemler" },
   { icon: Users, label: "Uzman Ekip" },
@@ -35,11 +39,19 @@ const HeroSection = () => (
           Polat İskele olarak projelerinize güvenli, dayanıklı ve kaliteli iskele sistemleri sunuyoruz. Uzman ekibimizle hızlı kurulum, güçlü destek ve müşteri memnuniyeti odaklı hizmet sağlıyoruz.
         </p>
         <div className="flex flex-wrap gap-4 mb-12">
-          <Button size="lg" className="bg-accent text-accent-foreground hover:bg-accent/90 gap-2 text-base px-8">
-            <Phone className="w-5 h-5" />
-            Hemen Ara
+          <Button asChild size="lg" className="bg-accent text-accent-foreground hover:bg-accent/90 gap-2 text-base px-8">
+            <a href="tel:+905385190189">
+              <Phone className="w-5 h-5" />
+              Hemen Ara
+            </a>
           </Button>
-          <Button size="lg" variant="outline" className="border-primary-foreground/30 text-primary-foreground hover:bg-primary-foreground/10 gap-2 text-base px-8">
+          <Button
+            type="button"
+            size="lg"
+            variant="outline"
+            onClick={scrollToContact}
+            className="border-primary-foreground/30 bg-primary-foreground/5 text-primary-foreground hover:bg-primary-foreground/10 hover:text-primary-foreground gap-2 text-base px-8"
+          >
             <FileText className="w-5 h-5" />
             Teklif Al
           </Button>

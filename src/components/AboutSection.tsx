@@ -55,8 +55,8 @@ const AboutSection = () => (
             ))}
           </div>
 
-          <Button className="bg-accent text-accent-foreground hover:bg-accent/90 gap-2 px-8">
-            Bizimle İletişime Geçin
+          <Button asChild className="bg-accent text-accent-foreground hover:bg-accent/90 gap-2 px-8">
+            <a href="#iletisim">Bizimle İletişime Geçin</a>
           </Button>
         </motion.div>
       </div>

@@ -4,10 +4,10 @@ import { Button } from "@/components/ui/button";
 import { useState } from "react";
 
 const contactInfo = [
-  { icon: Phone, label: "Telefon", value: "+90 5XX XXX XX XX" },
-  { icon: MessageCircle, label: "WhatsApp", value: "+90 5XX XXX XX XX" },
-  { icon: Mail, label: "E-posta", value: "info@polatiskele.com" },
-  { icon: MapPin, label: "Adres", value: "İstanbul / Türkiye" },
+  { icon: Phone, label: "Telefon", value: "+90 538 519 0189" },
+  { icon: MessageCircle, label: "WhatsApp", value: "+90 538 519 0189" },
+  { icon: Mail, label: "E-posta", value: "polatiskele@gmail.com" },
+  { icon: MapPin, label: "Adres", value: "25 Aralık, 33032. Sk. No:17/A-Kat:3, 27100 Şahinbey/Gaziantep, Türkiye" },
 ];
 
 const ContactSection = () => {
@@ -17,7 +17,18 @@ const ContactSection = () => {
 
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
-    // Form submission logic
+
+    const subject = encodeURIComponent("Teklif Talebi - Polat İskele");
+    const body = encodeURIComponent(
+      `Ad Soyad: ${formData.name}\n` +
+      `Telefon: ${formData.phone}\n` +
+      `E-posta: ${formData.email || "-"}\n` +
+      `Firma Adı: ${formData.company || "-"}\n` +
+      `Hizmet Türü: ${formData.service || "-"}\n` +
+      `Mesaj:\n${formData.message}`,
+    );
+
+    window.location.href = `mailto:polatiskele@gmail.com?subject=${subject}&body=${body}`;
   };
 
   return (
@@ -57,8 +68,22 @@ const ContactSection = () => {
               </div>
             ))}
 
-            <div className="mt-6 rounded-sm overflow-hidden border border-border h-48 bg-muted flex items-center justify-center">
-              <span className="text-muted-foreground text-sm">Google Harita Alanı</span>
+            <div className="mt-6 overflow-hidden rounded-sm border border-border">
+              <iframe
+                title="Polat İskele Google Harita"
+                src="https://www.google.com/maps?q=25+Aralık,+33032.+Sk.+No:17,+27100+Şahinbey/Gaziantep,+Türkiye&output=embed"
+                className="w-full h-48"
+                loading="lazy"
+                referrerPolicy="no-referrer-when-downgrade"
+              />
+              <a
+                href="https://www.google.com/maps/search/?api=1&query=25+Aralık,+33032.+Sk.+No:17,+27100+Şahinbey/Gaziantep,+Türkiye"
+                target="_blank"
+                rel="noreferrer"
+                className="block px-4 py-3 text-sm font-medium text-accent hover:text-accent-foreground bg-background"
+              >
+                Haritada Gör
+              </a>
             </div>
           </motion.div>
 
@@ -117,13 +142,11 @@ const ContactSection = () => {
                 className="w-full border border-input rounded-sm px-4 py-3 text-sm bg-background text-foreground focus:ring-2 focus:ring-accent/50 focus:border-accent outline-none transition"
                 value={formData.service}
                 onChange={(e) => setFormData({ ...formData, service: e.target.value })}
+                required
               >
                 <option value="">Seçiniz</option>
                 <option value="iskele-kiralama">İskele Kiralama</option>
                 <option value="cephe-iskelesi">H Tipi Cephe İskelesi</option>
-                <option value="beton-kalip">Ağır Beton Kalıp İskelesi</option>
-                <option value="aluminyum">Alüminyum İskele</option>
-                <option value="dis-cephe-asansoru">Dış Cephe Asansörü</option>
                 <option value="diger">Diğer</option>
               </select>
             </div>
@@ -134,6 +157,7 @@ const ContactSection = () => {
                 className="w-full border border-input rounded-sm px-4 py-3 text-sm bg-background text-foreground focus:ring-2 focus:ring-accent/50 focus:border-accent outline-none transition resize-none"
                 value={formData.message}
                 onChange={(e) => setFormData({ ...formData, message: e.target.value })}
+                required
               />
             </div>
             <Button type="submit" size="lg" className="w-full bg-accent text-accent-foreground hover:bg-accent/90 text-base">

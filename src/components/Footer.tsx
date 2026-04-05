@@ -11,14 +11,10 @@ const quickLinks = [
 const services = [
   "İskele Kiralama",
   "H Tipi Cephe İskelesi",
-  "Alüminyum İskele",
-  "Dış Cephe Asansörü",
-  "Teleskopik Dikme",
-  "Trio Kalıp",
 ];
 
 const Footer = () => (
-  <footer className="bg-surface-dark pt-16 pb-8">
+  <footer className="bg-slate-800/95 pt-16 pb-8 border-t border-slate-700/40">
     <div className="container mx-auto px-4">
       <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-10 mb-12">
         <div>
@@ -59,15 +55,15 @@ const Footer = () => (
           <div className="space-y-3">
             <div className="flex items-center gap-3">
               <Phone className="w-4 h-4 text-accent" />
-              <span className="text-sm text-surface-dark-foreground/60">+90 5XX XXX XX XX</span>
+              <span className="text-sm text-surface-dark-foreground/60">+90 538 519 0189</span>
             </div>
             <div className="flex items-center gap-3">
               <Mail className="w-4 h-4 text-accent" />
-              <span className="text-sm text-surface-dark-foreground/60">info@polatiskele.com</span>
+              <span className="text-sm text-surface-dark-foreground/60">polatiskele@gmail.com</span>
             </div>
             <div className="flex items-center gap-3">
               <MapPin className="w-4 h-4 text-accent" />
-              <span className="text-sm text-surface-dark-foreground/60">İstanbul / Türkiye</span>
+              <span className="text-sm text-surface-dark-foreground/60">25 Aralık Mah. 33032 Nolu Sok. 17/A-KAT:3 Şahinbey/Gaziantep</span>
             </div>
           </div>
         </div>
