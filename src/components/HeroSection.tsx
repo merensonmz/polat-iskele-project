@@ -32,11 +32,11 @@ const HeroSection = () => (
           Güvenlik & Kalite Önceliğimiz
         </span>
         <h1 className="font-display text-4xl sm:text-5xl lg:text-6xl font-extrabold leading-tight text-primary-foreground mb-6">
-          İnşaat İskelelerinde{" "}
+          Gaziantep İnşaat İskelelerinde{" "}
           <span className="text-accent">Güvenli</span> ve Profesyonel Çözümler
         </h1>
         <p className="text-lg sm:text-xl text-primary-foreground/80 max-w-2xl mb-8 leading-relaxed">
-          Polat İskele olarak projelerinize güvenli, dayanıklı ve kaliteli iskele sistemleri sunuyoruz. Uzman ekibimizle hızlı kurulum, güçlü destek ve müşteri memnuniyeti odaklı hizmet sağlıyoruz.
+          Gaziantep Polat İskele olarak projelerinize güvenli, dayanıklı ve kaliteli H tipi cephe iskele sistemleri sunuyoruz. Uzman ekibimizle hızlı kurulum, güçlü destek ve müşteri memnuniyeti odaklı hizmet sağlıyoruz.
         </p>
         <div className="flex flex-wrap gap-4 mb-12">
           <Button asChild size="lg" className="bg-accent text-accent-foreground hover:bg-accent/90 gap-2 text-base px-8">

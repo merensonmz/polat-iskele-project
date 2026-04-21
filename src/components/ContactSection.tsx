@@ -96,9 +96,12 @@ const ContactSection = () => {
           >
             <div className="grid sm:grid-cols-2 gap-4 mb-4">
               <div>
-                <label className="text-sm font-medium text-foreground mb-1.5 block">Ad Soyad</label>
+                <label htmlFor="contact-name" className="text-sm font-medium text-foreground mb-1.5 block">Ad Soyad</label>
                 <input
+                  id="contact-name"
+                  name="name"
                   type="text"
+                  autoComplete="name"
                   className="w-full border border-input rounded-sm px-4 py-3 text-sm bg-background text-foreground focus:ring-2 focus:ring-accent/50 focus:border-accent outline-none transition"
                   value={formData.name}
                   onChange={(e) => setFormData({ ...formData, name: e.target.value })}
@@ -106,9 +109,12 @@ const ContactSection = () => {
                 />
               </div>
               <div>
-                <label className="text-sm font-medium text-foreground mb-1.5 block">Telefon</label>
+                <label htmlFor="contact-phone" className="text-sm font-medium text-foreground mb-1.5 block">Telefon</label>
                 <input
+                  id="contact-phone"
+                  name="phone"
                   type="tel"
+                  autoComplete="tel"
                   className="w-full border border-input rounded-sm px-4 py-3 text-sm bg-background text-foreground focus:ring-2 focus:ring-accent/50 focus:border-accent outline-none transition"
                   value={formData.phone}
                   onChange={(e) => setFormData({ ...formData, phone: e.target.value })}
@@ -118,18 +124,24 @@ const ContactSection = () => {
             </div>
             <div className="grid sm:grid-cols-2 gap-4 mb-4">
               <div>
-                <label className="text-sm font-medium text-foreground mb-1.5 block">E-posta</label>
+                <label htmlFor="contact-email" className="text-sm font-medium text-foreground mb-1.5 block">E-posta</label>
                 <input
+                  id="contact-email"
+                  name="email"
                   type="email"
+                  autoComplete="email"
                   className="w-full border border-input rounded-sm px-4 py-3 text-sm bg-background text-foreground focus:ring-2 focus:ring-accent/50 focus:border-accent outline-none transition"
                   value={formData.email}
                   onChange={(e) => setFormData({ ...formData, email: e.target.value })}
                 />
               </div>
               <div>
-                <label className="text-sm font-medium text-foreground mb-1.5 block">Firma Adı</label>
+                <label htmlFor="contact-company" className="text-sm font-medium text-foreground mb-1.5 block">Firma Adı</label>
                 <input
+                  id="contact-company"
+                  name="company"
                   type="text"
+                  autoComplete="organization"
                   className="w-full border border-input rounded-sm px-4 py-3 text-sm bg-background text-foreground focus:ring-2 focus:ring-accent/50 focus:border-accent outline-none transition"
                   value={formData.company}
                   onChange={(e) => setFormData({ ...formData, company: e.target.value })}
@@ -137,8 +149,10 @@ const ContactSection = () => {
               </div>
             </div>
             <div className="mb-4">
-              <label className="text-sm font-medium text-foreground mb-1.5 block">Hizmet Türü</label>
+              <label htmlFor="contact-service" className="text-sm font-medium text-foreground mb-1.5 block">Hizmet Türü</label>
               <select
+                id="contact-service"
+                name="service"
                 className="w-full border border-input rounded-sm px-4 py-3 text-sm bg-background text-foreground focus:ring-2 focus:ring-accent/50 focus:border-accent outline-none transition"
                 value={formData.service}
                 onChange={(e) => setFormData({ ...formData, service: e.target.value })}
@@ -151,8 +165,10 @@ const ContactSection = () => {
               </select>
             </div>
             <div className="mb-6">
-              <label className="text-sm font-medium text-foreground mb-1.5 block">Mesaj</label>
+              <label htmlFor="contact-message" className="text-sm font-medium text-foreground mb-1.5 block">Mesaj</label>
               <textarea
+                id="contact-message"
+                name="message"
                 rows={4}
                 className="w-full border border-input rounded-sm px-4 py-3 text-sm bg-background text-foreground focus:ring-2 focus:ring-accent/50 focus:border-accent outline-none transition resize-none"
                 value={formData.message}

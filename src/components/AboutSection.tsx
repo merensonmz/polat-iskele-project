@@ -1,7 +1,7 @@
 import { motion } from "framer-motion";
 import { CheckCircle } from "lucide-react";
 import { Button } from "@/components/ui/button";
-import aboutImg from "@/assets/about-scaffolding.jpg";
+import aboutImg from "@/assets/optimized/hakkimizda-iskele.jpeg";
 
 const highlights = [
   "Güvenilir Hizmet",
@@ -53,6 +53,17 @@ const AboutSection = () => (
                 <span className="font-medium text-foreground">{h}</span>
               </div>
             ))}
+          </div>
+
+          <div className="mb-8 rounded-sm border border-border bg-card px-5 py-6 text-center shadow-sm">
+            <div className="mx-auto max-w-xl">
+              <h3 className="font-display text-xl font-bold text-foreground">
+                Üstün Kalite
+              </h3>
+              <p className="mt-3 text-sm leading-relaxed text-muted-foreground">
+                TÜV SÜD onaylı ISO 9001/14001/45001, TS EN 12810/12813, EN ISO 3834-2 ve EN 1090 standartlarına uygun belgeli kalite.
+              </p>
+            </div>
           </div>
 
           <Button asChild className="bg-accent text-accent-foreground hover:bg-accent/90 gap-2 px-8">

@@ -1,7 +1,7 @@
 import { useState } from "react";
 import { Menu, X, Phone, FileText } from "lucide-react";
 import { Button } from "@/components/ui/button";
-import logo from "@/assets/logo.png";
+import logo from "@/assets/optimized/logo.png";
 
 const navItems = [
   { label: "Ana Sayfa", href: "/" },

@@ -1,13 +1,12 @@
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import { Button } from "@/components/ui/button";
-import { ArrowRight } from "lucide-react";
-import heroImg from "@/assets/Htipi_1.jpeg";
-import Htipi2 from "@/assets/Htipi_2.jpeg";
-import Htipi3 from "@/assets/Htipi_3.jpeg";
-import Htipi4 from "@/assets/Htipi_4.jpeg";
-import Htipi5 from "@/assets/Htipi_5.jpeg";
-import Htipi6 from "@/assets/Htipi_6.jpeg";
+import heroImg from "@/assets/services-optimized/Htipi_1.jpeg";
+import Htipi2 from "@/assets/services-optimized/Htipi_2.jpeg";
+import Htipi3 from "@/assets/services-optimized/Htipi_3.jpeg";
+import Htipi4 from "@/assets/services-optimized/Htipi_4.jpeg";
+import Htipi5 from "@/assets/services-optimized/Htipi_5.jpeg";
+import Htipi6 from "@/assets/services-optimized/Htipi_6.jpeg";
 
 const galleryImages = [
   {
