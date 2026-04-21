@@ -1,5 +1,6 @@
 import { motion } from "framer-motion";
 import { ArrowRight } from "lucide-react";
+import { Link } from "react-router-dom";
 import { Button } from "@/components/ui/button";
 import { Carousel, CarouselContent, CarouselItem, CarouselPrevious, CarouselNext } from "@/components/ui/carousel";
 import Htipi1 from "@/assets/Htipi_1.jpeg";
@@ -87,7 +88,7 @@ const ServicesSection = () => (
 
       <div className="mt-8 text-center">
         <Button asChild size="lg" className="bg-accent text-accent-foreground hover:bg-accent/90 gap-2 px-8">
-          <a href="/h-tipi">Detayları İncele</a>
+          <Link to="/h-tipi">Detayları İncele</Link>
         </Button>
       </div>
     </div>
