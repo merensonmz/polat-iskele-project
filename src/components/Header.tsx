@@ -17,7 +17,7 @@ const Header = () => {
   return (
     <header className="fixed top-0 left-0 right-0 z-50 bg-slate-800/95 backdrop-blur-md border-b border-slate-600/40">
       <div className="container mx-auto flex items-center justify-between h-16 md:h-20 px-4">
-        <a href="#hero" className="flex items-center gap-3">
+        <a href="/" className="flex items-center gap-3">
           <img
             src={logo}
             alt="Polat İskele"
@@ -62,17 +62,17 @@ const Header = () => {
             ))}
             <div className="flex gap-3 pt-3 border-t border-foreground/10">
               <Button asChild variant="outline" size="sm" className="border-accent/40 text-accent hover:bg-accent hover:text-accent-foreground gap-2 flex-1">
-              <a href="#iletisim" onClick={() => setMobileOpen(false)}>
-                <Phone className="w-4 h-4" />
-                Hemen Ara
-              </a>
-            </Button>
-            <Button asChild size="sm" className="bg-accent text-accent-foreground hover:bg-accent/90 gap-2 flex-1">
-              <a href="#iletisim" onClick={() => setMobileOpen(false)}>
-                <FileText className="w-4 h-4" />
-                Teklif Al
-              </a>
-            </Button>
+                <a href="/#iletisim" onClick={() => setMobileOpen(false)}>
+                  <Phone className="w-4 h-4" />
+                  Hemen Ara
+                </a>
+              </Button>
+              <Button asChild size="sm" className="bg-accent text-accent-foreground hover:bg-accent/90 gap-2 flex-1">
+                <a href="/#iletisim" onClick={() => setMobileOpen(false)}>
+                  <FileText className="w-4 h-4" />
+                  Teklif Al
+                </a>
+              </Button>
             </div>
           </nav>
         </div>

@@ -5,6 +5,9 @@ import { Toaster } from "@/components/ui/toaster";
 import { TooltipProvider } from "@/components/ui/tooltip";
 import Index from "./pages/Index.tsx";
 import HTipiIskele from "./pages/HTipiIskele.tsx";
+import KvkkAydinlatmaMetni from "./pages/KvkkAydinlatmaMetni.tsx";
+import GizlilikVeCerezPolitikasi from "./pages/GizlilikVeCerezPolitikasi.tsx";
+import KullanimSartlari from "./pages/KullanimSartlari.tsx";
 import NotFound from "./pages/NotFound.tsx";
 
 const queryClient = new QueryClient();
@@ -18,6 +21,9 @@ const App = () => (
         <Routes>
           <Route path="/" element={<Index />} />
           <Route path="/h-tipi" element={<HTipiIskele />} />
+          <Route path="/kvkk-aydinlatma-metni" element={<KvkkAydinlatmaMetni />} />
+          <Route path="/gizlilik-ve-cerez-politikasi" element={<GizlilikVeCerezPolitikasi />} />
+          <Route path="/kullanim-sartlari" element={<KullanimSartlari />} />
           {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
           <Route path="*" element={<NotFound />} />
         </Routes>
